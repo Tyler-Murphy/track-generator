@@ -198,11 +198,11 @@
         "signature": "bbf144d4354e2aaa6439f32761f3ee798cc68d1600adab6e2a596f25269f106d"
       },
       "/home/ec2-user/environment/track-generator/src/index.ts": {
-        "version": "d3e768a827ba65a468f5ca7e3b8ffd2b7d9376a566722622b27304433952deb5",
-        "signature": "809b8976128c5942c6c95d6b6015b6946133fa3229fff11e8b469cbe6a9571c8"
+        "version": "42b80924345fc29840678e5c267dafcbf9c7f8dd302c905626cd7ea957d1e9c7",
+        "signature": "fa8b2563673a2ce6130575137955944fb64576caa6b71216e77e4358c685c91a"
       },
       "/home/ec2-user/environment/track-generator/src/browser.ts": {
-        "version": "88121af48ecd9e9c7048c7b99cd34a6681889af98225a8ccebba1d81411dc14d",
+        "version": "1a2636a28d35a88c94357bfedce2a757610ea7f361f9b1b21ebcf33c0f14c03f",
         "signature": "9fdfec071ea6b7f1252b59e977c86470f238cce05cedd19866e8a783b0f771de"
       },
       "/home/ec2-user/environment/track-generator/node_modules/parallel-test/dist/index.d.ts": {
@@ -405,6 +405,7 @@
       "incremental": true,
       "strict": true,
       "esModuleInterop": true,
+      "watch": true,
       "configFilePath": "/home/ec2-user/environment/track-generator/tsconfig.json"
     },
     "referencedMap": {

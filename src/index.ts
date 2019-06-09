@@ -37,9 +37,13 @@ import * as lodash from 'lodash'
     at step (index.js:32)
     at Object.next (index.js:13)
     at fulfilled (index.js:4)
+ * - Check if the end point of a track section is mostly-enclosed. If it is, remake it.
+ *   - It could work to project a bunch of long lines in random directions. If more than X% of them hit an existing piece of track, then consider the point to be mostly enclosed
+ * - Rather than making a whole next track piece, make just its next center line, check for collisions with existing segments, and then outline it if the center doesn't collide.
  */
 
-const trackWidth = 0.1
+const minimumTrackWidth = 0.05
+const maximumTrackWidth = 0.5
 const curveIntersectionThreshold = 0.001
 const maximumAllowedOutlineGap = 0.0001
 const emitter = new Nanobus()
@@ -91,10 +95,13 @@ interface Point {
     y: number
 }
 
-const maximumTriesPerSection = 2
+const maximumTriesPerSection = 3
 async function makeTrack(requestedSections = 5): Promise<Track> {
+    const trackWidth = lodash.random(minimumTrackWidth, maximumTrackWidth, true)
+    console.log(`Track width:`, trackWidth)
+
     const sections = [
-        getRandomTrackSection()
+        getRandomTrackSection({ trackWidth })
     ]
     const triesBySection: Array<number> = [1]
 
@@ -119,7 +126,7 @@ async function makeTrack(requestedSections = 5): Promise<Track> {
             continue
         }
 
-        const nextSection = getRandomTrackSection({ previousSection: sections[currentSectionIndex - 1] })
+        const nextSection = getRandomTrackSection({ previousSection: sections[currentSectionIndex - 1], allPreviousSections: sections, trackWidth })
 
         emitter.emit('sectionsSoFar', [...sections, nextSection])
 
@@ -144,23 +151,35 @@ function minimalDelay(): Promise<void> {
 }
 
 function getRandomTrackSection({
-    previousSection
+    previousSection,
+    allPreviousSections = [],
+    trackWidth,
 }: {
     previousSection?: TrackSection
-} = {}): TrackSection {
-    const args = Array.from(arguments)
+    allPreviousSections?: Track,
+    trackWidth: number
+}): TrackSection {
+    const args = Array.from(arguments) as Parameters<typeof getRandomTrackSection>
     const retry = () => getRandomTrackSection(...args)
     const boundingBoxOrigin: Point = previousSection ? add(invert(getRandomPoint()), endOfCenterLine(previousSection)): { x: xMinimum, y: yMinimum }
     const startingPoint = previousSection ? endOfCenterLine(previousSection) : getRandomPoint({ relativeTo: boundingBoxOrigin })
     const firstControlPoint = previousSection ? randomPointAlongEndOfCenterLineTangent(previousSection) : getRandomPoint({ relativeTo: boundingBoxOrigin })
+    const secondControlPoint = getRandomPoint({ relativeTo: boundingBoxOrigin })
+    const endingPoint = getRandomPoint({ relativeTo: boundingBoxOrigin })
 
     console.debug(`Generating random track section with bounding box origin ${JSON.stringify(boundingBoxOrigin)}, starting point ${JSON.stringify(startingPoint)}, and first control point ${JSON.stringify(firstControlPoint)}`)
+
+    if (isMostlyEnclosed(endingPoint, allPreviousSections)) {
+        console.log(`End point of random section is mostly enclosed, so it'll be difficult to find a way out... retrying`)
+
+        return retry()
+    }
 
     const centerLine = new Bezier([
         startingPoint,
         firstControlPoint,
-        getRandomPoint({ relativeTo: boundingBoxOrigin }),  // second control point
-        getRandomPoint({ relativeTo: boundingBoxOrigin }),  // ending point
+        secondControlPoint,
+        endingPoint,
     ])
 
     if (centerLine.selfintersects(curveIntersectionThreshold).length > 0) {
@@ -172,7 +191,7 @@ function getRandomTrackSection({
     const outlineCurves = centerLine.outline(trackWidth / 2).curves
     const endCapIndexes: Array<number> = []
     const endCaps = outlineCurves.filter((curve, index) => {
-        if (isProbablyEndCap(curve)) {
+        if (isProbablyEndCap(curve, trackWidth)) {
             endCapIndexes.push(index)
             return true
         }
@@ -185,7 +204,7 @@ function getRandomTrackSection({
         return retry()
     }
 
-    if (endCaps.some(cap => endpointIsTooCloseToCurve(cap, centerLine))) {
+    if (endCaps.some(cap => endpointIsTooCloseToCurve(cap, centerLine, trackWidth))) {
         console.log(`End cap endpoint is too close to the centerline. This can indicate tight curvature at the end of the path. Retrying.`)
 
         return retry()
@@ -219,6 +238,49 @@ function getRandomTrackSection({
     }
 }
 
+const numberOfLines = 10
+const lineLength = 50
+const linesInAllDirectionsFromOrigin: Array<BezierJs.Line> = lodash.range(numberOfLines).map(lineNumber => ({
+    p1: {
+        x: 0,
+        y: 0,
+    },
+    p2: {
+        x: Math.cos(Math.PI * 2 * lineNumber / numberOfLines) * lineLength,
+        y: Math.sin(Math.PI * 2 * lineNumber / numberOfLines) * lineLength,
+    }
+}))
+function isMostlyEnclosed(point: Point, existingSections: Track): boolean {
+    if (existingSections.length === 0) {
+        return false
+    }
+
+    let directionsWithIntersections = 0
+    const centerLines = existingSections.map(section => section.center)
+
+    for (const line of linesInAllDirectionsFromOrigin) {
+        const lineTranslatedToPoint: BezierJs.Line = {
+            p1: point,
+            p2: add(point, line.p2)
+        }
+
+        // go in reverse, since it's more likely that more recent sections enclose this point
+        for (let existingCurveIndex = centerLines.length - 1; existingCurveIndex >= 0; existingCurveIndex -= 1) {
+            if (centerLines[existingCurveIndex].lineIntersects(lineTranslatedToPoint).length > 0) {
+                directionsWithIntersections += 1
+
+                if (directionsWithIntersections / numberOfLines > 0.6) {
+                    return true
+                }
+
+                break
+            }
+        }
+    }
+
+    return false
+}
+
 function endOfCenterLine(section: TrackSection): Point {
     return section.center.get(1)
 }
@@ -231,8 +293,9 @@ function randomPointAlongEndOfCenterLineTangent(section: TrackSection): Point {
     return add(endPoint, scaleLength(tangent, distanceAlongTangent))
 }
 
-const minimumAcceptableCapEndpointDistance = 0.99 * (trackWidth / 2)
-function endpointIsTooCloseToCurve(curveToCheckEndpoints: Bezier, curveToStayAwayFrom: Bezier): boolean {
+function endpointIsTooCloseToCurve(curveToCheckEndpoints: Bezier, curveToStayAwayFrom: Bezier, trackWidth: number): boolean {
+    const minimumAcceptableCapEndpointDistance = 0.99 * (trackWidth / 2)
+
     if (curveToStayAwayFrom.project(curveToCheckEndpoints.points[0]).d < minimumAcceptableCapEndpointDistance) {
         return true
     }
@@ -325,7 +388,7 @@ function getAllCurves(track: Track): ReadonlyArray<Bezier> {
     ])
 }
 
-function isProbablyEndCap(curve: Bezier): boolean {
+function isProbablyEndCap(curve: Bezier, trackWidth: number): boolean {
     const length = curve.length()
 
     return curve._linear && length > (0.95 * trackWidth) && length < (1.05 * trackWidth)
@@ -336,10 +399,16 @@ function getRandomPoint({
 }: {
     relativeTo?: Point
 } = {}): Point {
-    return add(relativeTo, {
-        x: lodash.random(xMinimum, xMaximum, true),
-        y: lodash.random(yMinimum, yMaximum, true),
-    })
+    return add(
+        relativeTo,
+        multiply(
+            {
+                x: lodash.random(xMinimum, xMaximum, true),
+                y: lodash.random(yMinimum, yMaximum, true),
+            },
+            lodash.random(0.5, 3, true)
+        )
+    )
 }
 
 function getLength({ x, y }: Point): number {

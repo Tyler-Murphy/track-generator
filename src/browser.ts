@@ -5,7 +5,6 @@ type Color = 'black' | 'red' | 'blue' | 'green' | 'gray'
 
 console.log('initializing')
 
-let curvesDrawn = 0
 const canvas = document.createElement('canvas')
 canvas.setAttribute('style', 'border: 1px solid black;')
 const canvasWidth = 1000
@@ -24,7 +23,7 @@ const drawingContext = canvas.getContext('2d') || new Proxy({} as CanvasRenderin
 function drawTrack(track: Track): void {
     const scaler = getScaler(track)
 
-    track.forEach(({ center, leftEdge, rightEdge }) => {
+    track.forEach(({ center, leftEdge, rightEdge }, index) => {
         drawCurve({ curve: center, scaler, dashed: true, color: 'gray' })
         leftEdge.forEach(curve => drawCurve({ curve, scaler, color: 'red' }))
         rightEdge.forEach(curve => drawCurve({ curve, scaler, color: 'blue' }))
@@ -35,26 +34,26 @@ function drawCurve({
     curve,
     scaler,
     color = 'black',
-    labelStartingPoint = false,
+    labelStartingPoint = '',
     dashed = false,
 }: {
     curve: Bezier,
-    scaler: (point: BezierJs.Point) => BezierJs.Point,
+    scaler: Scaler,
     color?: Color
-    labelStartingPoint?: boolean,
+    labelStartingPoint?: string,
     dashed?: boolean,
 }): void {
     const [
         startingControlPoint,
         ...remainingControlPoints
-    ] = curve.points.map(scaler)
+    ] = curve.points.map(scaler.scale)
 
 
     if (remainingControlPoints.length !== 3) {
         throw new Error('only cubic curves are supported')
     }
 
-    drawingContext.setLineDash(dashed ? [5, 15] : [])
+    drawingContext.setLineDash(dashed ? [scaler.scaleFactor * 0.01, scaler.scaleFactor * 0.03] : [])
     drawingContext.strokeStyle = color
     drawingContext.beginPath()
     drawingContext.moveTo(startingControlPoint.x, startingControlPoint.y)
@@ -68,15 +67,13 @@ function drawCurve({
     )
 
     labelStartingPoint && drawingContext.fillText(
-        curvesDrawn + ', ' + Math.round(startingControlPoint.x) + ', ' + Math.round(startingControlPoint.y),
+        labelStartingPoint + ', ' + Math.round(startingControlPoint.x) + ', ' + Math.round(startingControlPoint.y),
         startingControlPoint.x,
         startingControlPoint.y
     )
 
     drawingContext.stroke()
     drawingContext.closePath()
-
-    curvesDrawn += 1
 }
 
 function drawPoint({
@@ -137,7 +134,7 @@ function makeOriginBottomLeft(point: BezierJs.Point): BezierJs.Point {
  *
  * It figures out how to translate points based on the origin of the bounding box, and then how to scale points based on the size of the bounding box
  */
-function getScaler(track: Track): (point: BezierJs.Point) => BezierJs.Point {
+function getScaler(track: Track): Scaler {
     const boundingBox = getBoundingBox(track)
     const origin: BezierJs.Point = {
         x: boundingBox.x.min,
@@ -158,13 +155,23 @@ function getScaler(track: Track): (point: BezierJs.Point) => BezierJs.Point {
 
     console.debug(`Scale function created for rendering. It will translate points by ${JSON.stringify(necessaryTranslation)}, then scale by ${scaleFactor}. Width is ${widthIsLimitingDimension ? '' : 'not'} the limiting factor.`)
 
-    return point => helpers.points.multiply(
+    const scale = (point: BezierJs.Point) => helpers.points.multiply(
         helpers.points.add(
             point,
             necessaryTranslation,
         ),
         scaleFactor,
     )
+
+    return {
+        scaleFactor,
+        scale,
+    }
+}
+
+interface Scaler {
+    scale: (point: BezierJs.Point) => BezierJs.Point,
+    scaleFactor: number
 }
 
 /** Returns the maximum of the height or width of a track */
@@ -193,7 +200,7 @@ async function refresh(): Promise<void> {
         drawTrack(track)
     })
 
-    const track = await makeTrack(200)
+    const track = await makeTrack(15)
 
     clearEverything()
 
