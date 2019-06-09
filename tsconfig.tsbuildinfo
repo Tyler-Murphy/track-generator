@@ -33,18 +33,6 @@
         "version": "973df4e41aea3780ce77073777d37dd5896f684124f4c42409f3a832133837a4",
         "signature": "973df4e41aea3780ce77073777d37dd5896f684124f4c42409f3a832133837a4"
       },
-      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.dom.iterable.d.ts": {
-        "version": "eb843da29336c7d5840bb439b24cf68a4a1652fd01c6e4e66ec74d8b136e944a",
-        "signature": "eb843da29336c7d5840bb439b24cf68a4a1652fd01c6e4e66ec74d8b136e944a"
-      },
-      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.webworker.importscripts.d.ts": {
-        "version": "fe4e59403e34c7ff747abe4ff6abbc7718229556d7c1a5b93473fb53156c913b",
-        "signature": "fe4e59403e34c7ff747abe4ff6abbc7718229556d7c1a5b93473fb53156c913b"
-      },
-      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.scripthost.d.ts": {
-        "version": "b9faa17292f17d2ad75e34fac77dd63a6403af1dba02d39cd0cbb9ffdf3de8b9",
-        "signature": "b9faa17292f17d2ad75e34fac77dd63a6403af1dba02d39cd0cbb9ffdf3de8b9"
-      },
       "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2015.core.d.ts": {
         "version": "2a0390a665763bcc90f0670e43c587928d8fefe2a94a11209c1e22cba7b09f52",
         "signature": "2a0390a665763bcc90f0670e43c587928d8fefe2a94a11209c1e22cba7b09f52"
@@ -145,10 +133,6 @@
         "version": "63b66918290d794f73832a6d0325be5026236674fe8c0cb0b68d162000d7bbe8",
         "signature": "63b66918290d794f73832a6d0325be5026236674fe8c0cb0b68d162000d7bbe8"
       },
-      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.esnext.full.d.ts": {
-        "version": "b209a815904a485328677714ef8c4ddd2dcf4040154fa204d25cbf31cd4ff0f3",
-        "signature": "b209a815904a485328677714ef8c4ddd2dcf4040154fa204d25cbf31cd4ff0f3"
-      },
       "/home/ec2-user/environment/track-generator/node_modules/@types/bezier-js/index.d.ts": {
         "version": "5eb6b17d4346413f5c07ffe8d782f7c110b753f35293b536881ef3bfa50194ed",
         "signature": "5eb6b17d4346413f5c07ffe8d782f7c110b753f35293b536881ef3bfa50194ed"
@@ -156,6 +140,10 @@
       "/home/ec2-user/environment/track-generator/node_modules/nanobus/index.d.ts": {
         "version": "2620a073121ea407797c9c10b565a218cb50e99ae19d9e432a6d4387b1421c71",
         "signature": "2620a073121ea407797c9c10b565a218cb50e99ae19d9e432a6d4387b1421c71"
+      },
+      "/home/ec2-user/environment/node_modules/typed-emitter/index.d.ts": {
+        "version": "4929147b4e6e66f5eed8723620fce9a143d9c38a13dd1c388e570b4471dfac7f",
+        "signature": "4929147b4e6e66f5eed8723620fce9a143d9c38a13dd1c388e570b4471dfac7f"
       },
       "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/common.d.ts": {
         "version": "4025cf62742c5bb3d383c8a62342481622c87e3397ea5e7b7baab18b9efd5798",
@@ -210,17 +198,205 @@
         "signature": "bbf144d4354e2aaa6439f32761f3ee798cc68d1600adab6e2a596f25269f106d"
       },
       "/home/ec2-user/environment/track-generator/src/index.ts": {
-        "version": "91626984e331f64b690cc7eb61f131b39e323f0d270845aa85e14d570155c182",
-        "signature": "2a6d36f96b68e3720e0b5b0eb475f139dbbe38c21954a3bd9db2ef4a0d5b52d3"
+        "version": "d3e768a827ba65a468f5ca7e3b8ffd2b7d9376a566722622b27304433952deb5",
+        "signature": "809b8976128c5942c6c95d6b6015b6946133fa3229fff11e8b469cbe6a9571c8"
       },
       "/home/ec2-user/environment/track-generator/src/browser.ts": {
-        "version": "5bf7af2abb9c440194708ba41b4236418a0e7e9df9873013bc56130416d2eed7",
+        "version": "88121af48ecd9e9c7048c7b99cd34a6681889af98225a8ccebba1d81411dc14d",
         "signature": "9fdfec071ea6b7f1252b59e977c86470f238cce05cedd19866e8a783b0f771de"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/parallel-test/dist/index.d.ts": {
+        "version": "baa547a6a3547b2ef928143b89988d3ab658ed9297d1bf9cabbe3714d89e6327",
+        "signature": "baa547a6a3547b2ef928143b89988d3ab658ed9297d1bf9cabbe3714d89e6327"
+      },
+      "/home/ec2-user/environment/track-generator/src/test/gapsInOutline.ts": {
+        "version": "1114ef5b63538b36064b43b91f93f0dbc3abdc014324fc3215c6ac3f0d200e0c",
+        "signature": "4399eadeb7cd7254a3699c501c7ed592bb7457ed3e165d56ea56995558175eb3"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/globals.d.ts": {
+        "version": "1bba2fc2e58c0340b92eeb9185be6e75e27d52f10a315aa65810a19b3277f1c7",
+        "signature": "1bba2fc2e58c0340b92eeb9185be6e75e27d52f10a315aa65810a19b3277f1c7"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/assert.d.ts": {
+        "version": "e37e4814461321ef67cbb2f4c9def6be18ff85670e6c665131b320e052905b75",
+        "signature": "e37e4814461321ef67cbb2f4c9def6be18ff85670e6c665131b320e052905b75"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/async_hooks.d.ts": {
+        "version": "138476cfdccbb9e2c7e06602bc216af843a56c4f3469a79106bc660ba94bd66a",
+        "signature": "138476cfdccbb9e2c7e06602bc216af843a56c4f3469a79106bc660ba94bd66a"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/buffer.d.ts": {
+        "version": "fe892fea1e75a442fffb4a604d7eeb451e858787a9f2f01c4e83bf12a3b5048d",
+        "signature": "fe892fea1e75a442fffb4a604d7eeb451e858787a9f2f01c4e83bf12a3b5048d"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/child_process.d.ts": {
+        "version": "f1086bf9854d882321f28c3691987832c97e5bb360f9bbc5e0e5a150fa055f56",
+        "signature": "f1086bf9854d882321f28c3691987832c97e5bb360f9bbc5e0e5a150fa055f56"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/cluster.d.ts": {
+        "version": "d2704553f735d9b9cf31a26cbf4dd085e89b0ec3eec33d684b2517555370b665",
+        "signature": "d2704553f735d9b9cf31a26cbf4dd085e89b0ec3eec33d684b2517555370b665"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/console.d.ts": {
+        "version": "525c8fc510d9632d2a0a9de2d41c3ac1cdd79ff44d3b45c6d81cacabb683528d",
+        "signature": "525c8fc510d9632d2a0a9de2d41c3ac1cdd79ff44d3b45c6d81cacabb683528d"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/constants.d.ts": {
+        "version": "b952021e804dcd9cb5e5552e1ec8bf9f479b61e20da5641e2a542fe77db9a598",
+        "signature": "b952021e804dcd9cb5e5552e1ec8bf9f479b61e20da5641e2a542fe77db9a598"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/crypto.d.ts": {
+        "version": "6b956acd0fa4df8f2723012d18498954438874cc63a0bd639dc470135a782101",
+        "signature": "6b956acd0fa4df8f2723012d18498954438874cc63a0bd639dc470135a782101"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/dgram.d.ts": {
+        "version": "3d1cb0eaae19fa89fe381bba6d5a149d1bf34efc0134220879f57e2061732a6d",
+        "signature": "3d1cb0eaae19fa89fe381bba6d5a149d1bf34efc0134220879f57e2061732a6d"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/dns.d.ts": {
+        "version": "896cd7d58e9d832392a6e374a8f8b64f142089b4d2678a2c90fd8d1d49128677",
+        "signature": "896cd7d58e9d832392a6e374a8f8b64f142089b4d2678a2c90fd8d1d49128677"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/domain.d.ts": {
+        "version": "ae3487bdb9b50c1d8bbeb6b55c8b2b9aa79bbc46d7afbc3483169ad8750c4304",
+        "signature": "ae3487bdb9b50c1d8bbeb6b55c8b2b9aa79bbc46d7afbc3483169ad8750c4304"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts": {
+        "version": "4a419878f025046ff6748d073123b0451849f83b7dbca907037a53e3eaa9bbbb",
+        "signature": "4a419878f025046ff6748d073123b0451849f83b7dbca907037a53e3eaa9bbbb"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/fs.d.ts": {
+        "version": "69ff9a3871726b29a91044d233181f146a0d21a39f66f46dcdcce7e8f91c1de1",
+        "signature": "69ff9a3871726b29a91044d233181f146a0d21a39f66f46dcdcce7e8f91c1de1"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/http.d.ts": {
+        "version": "896c59370c35abd48415751b78ce927eda463a20f1a3921bf3dc4962504ec06e",
+        "signature": "896c59370c35abd48415751b78ce927eda463a20f1a3921bf3dc4962504ec06e"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/http2.d.ts": {
+        "version": "e36a3ca6d86f19ff207dabc61d27088c464f2dc3ffb64b0daf17dc33b85191e6",
+        "signature": "e36a3ca6d86f19ff207dabc61d27088c464f2dc3ffb64b0daf17dc33b85191e6"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/https.d.ts": {
+        "version": "152af7c23ec219f632afa2d861abc65993f56cd39a4f3a4018515dbc05950a74",
+        "signature": "152af7c23ec219f632afa2d861abc65993f56cd39a4f3a4018515dbc05950a74"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/inspector.d.ts": {
+        "version": "3a0bdc4c5b6f84a1abb5356d7a7fa1f96ac6c5b5646eec3ef2b33c1ed095e155",
+        "signature": "3a0bdc4c5b6f84a1abb5356d7a7fa1f96ac6c5b5646eec3ef2b33c1ed095e155"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/module.d.ts": {
+        "version": "03394bf8deb8781b490ae9266a843fbdf00647947d79e25fcbf1d89a9e9c8a66",
+        "signature": "03394bf8deb8781b490ae9266a843fbdf00647947d79e25fcbf1d89a9e9c8a66"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/net.d.ts": {
+        "version": "56a15cc211894d79aa44cbb46c276bfd3f10458a61bff2dec99114db8a7e71e3",
+        "signature": "56a15cc211894d79aa44cbb46c276bfd3f10458a61bff2dec99114db8a7e71e3"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/os.d.ts": {
+        "version": "0ab49f803fa1d0f26682096e87ae239be05fee89ac538d30c59ab5a15bd38e6a",
+        "signature": "0ab49f803fa1d0f26682096e87ae239be05fee89ac538d30c59ab5a15bd38e6a"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/path.d.ts": {
+        "version": "61c84c3b0eb6e60196d15ae5e21793a1d4241c547f0bdd0529ffae838d1a073c",
+        "signature": "61c84c3b0eb6e60196d15ae5e21793a1d4241c547f0bdd0529ffae838d1a073c"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/perf_hooks.d.ts": {
+        "version": "981192e57b0e159c977f1d8e8b8576e9d6b4e013b902e9c0d4b178cb47e2dc86",
+        "signature": "981192e57b0e159c977f1d8e8b8576e9d6b4e013b902e9c0d4b178cb47e2dc86"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/process.d.ts": {
+        "version": "3a8848a9c307429b861402cc69bc472ffe0c05b86474fc158723169161e16389",
+        "signature": "3a8848a9c307429b861402cc69bc472ffe0c05b86474fc158723169161e16389"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/punycode.d.ts": {
+        "version": "eeb0d1ad28e70773ac57ae9fe939c3bad6af2525a463c28f9ec31b5953de6735",
+        "signature": "eeb0d1ad28e70773ac57ae9fe939c3bad6af2525a463c28f9ec31b5953de6735"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/querystring.d.ts": {
+        "version": "8969e0b4d22ca77ad011c8fc4a25ec5d515bdfae4ecbd22608ed0d5c38829c1e",
+        "signature": "8969e0b4d22ca77ad011c8fc4a25ec5d515bdfae4ecbd22608ed0d5c38829c1e"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/readline.d.ts": {
+        "version": "544728a999d35afc7b9e6d7420fb10046c16fcc5cb54fef21d2f5de78bf98830",
+        "signature": "544728a999d35afc7b9e6d7420fb10046c16fcc5cb54fef21d2f5de78bf98830"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/repl.d.ts": {
+        "version": "d0b0b533dc34ff7ffd019665fdc2b2aeae717bc1347e17a5bdc4d6572b5c109a",
+        "signature": "d0b0b533dc34ff7ffd019665fdc2b2aeae717bc1347e17a5bdc4d6572b5c109a"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/stream.d.ts": {
+        "version": "c07900741b39a32e2167f08aadcdea84b077727f828f27ceebf534715ea66d97",
+        "signature": "c07900741b39a32e2167f08aadcdea84b077727f828f27ceebf534715ea66d97"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/string_decoder.d.ts": {
+        "version": "17e157df6125098a1a34eb4d201ee4ac03bbe97e471ab5627bb2c40fce555948",
+        "signature": "17e157df6125098a1a34eb4d201ee4ac03bbe97e471ab5627bb2c40fce555948"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/timers.d.ts": {
+        "version": "b40652bf8ce4a18133b31349086523b219724dca8df3448c1a0742528e7ad5b9",
+        "signature": "b40652bf8ce4a18133b31349086523b219724dca8df3448c1a0742528e7ad5b9"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/tls.d.ts": {
+        "version": "68f639766f4b9d5c832bbca1203955969a8686137a4a197285dd64519cc26e58",
+        "signature": "68f639766f4b9d5c832bbca1203955969a8686137a4a197285dd64519cc26e58"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/trace_events.d.ts": {
+        "version": "978aecd2e6bc2ac094e9a35eda98ff8586713857b3655e7c98ca5ed8f7d50662",
+        "signature": "978aecd2e6bc2ac094e9a35eda98ff8586713857b3655e7c98ca5ed8f7d50662"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/tty.d.ts": {
+        "version": "3a59044813b24482ad7a7963bbee6b62507561969e273fbdc992ed9bc948fe13",
+        "signature": "3a59044813b24482ad7a7963bbee6b62507561969e273fbdc992ed9bc948fe13"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/url.d.ts": {
+        "version": "431151f55411c3f27cf539b987a7d1de453188ed58e54bc946183d280d3444a2",
+        "signature": "431151f55411c3f27cf539b987a7d1de453188ed58e54bc946183d280d3444a2"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts": {
+        "version": "766b7f1a0e67ed1106ae02583408d9e3a820201c4539f9bed8be8e4f07ee6e92",
+        "signature": "766b7f1a0e67ed1106ae02583408d9e3a820201c4539f9bed8be8e4f07ee6e92"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/v8.d.ts": {
+        "version": "e880a08fbb0d9ee2f733f9183f4d1bdb75bc9e0e64060a8a1fc30540791fcded",
+        "signature": "e880a08fbb0d9ee2f733f9183f4d1bdb75bc9e0e64060a8a1fc30540791fcded"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/vm.d.ts": {
+        "version": "f98df5ec124f441b465332271d0b083aeec815cd3c92d9249b9739e6318477a9",
+        "signature": "f98df5ec124f441b465332271d0b083aeec815cd3c92d9249b9739e6318477a9"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/worker_threads.d.ts": {
+        "version": "e761c833140e3ab6f9deab37fe034154f3eb15547dce61395d9b0b1f130f3fa3",
+        "signature": "e761c833140e3ab6f9deab37fe034154f3eb15547dce61395d9b0b1f130f3fa3"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/zlib.d.ts": {
+        "version": "58257a0147702ab415ed18164557a0feb9c5d1351792ea293a876e6b7ed0c559",
+        "signature": "58257a0147702ab415ed18164557a0feb9c5d1351792ea293a876e6b7ed0c559"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/base.d.ts": {
+        "version": "6622f76993bdfeaacb947ba7c4cf26f2e5c5194194d02d792c3cba4174cd8fce",
+        "signature": "6622f76993bdfeaacb947ba7c4cf26f2e5c5194194d02d792c3cba4174cd8fce"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts": {
+        "version": "4f54f0a9dd3b644c99ec32b32f8804d5978bc854799b228ae9c467bf3c84c64c",
+        "signature": "4f54f0a9dd3b644c99ec32b32f8804d5978bc854799b228ae9c467bf3c84c64c"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/globals.d.ts": {
+        "version": "ce6b191c382ee19f23678b8c364484627bcf424e8f408357a2f5530fb8d52a45",
+        "signature": "ce6b191c382ee19f23678b8c364484627bcf424e8f408357a2f5530fb8d52a45"
+      },
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/index.d.ts": {
+        "version": "765fc34423b93c2ab763670d8d11d99e5f47387c13c161d6f1640dd6d91b7d1c",
+        "signature": "765fc34423b93c2ab763670d8d11d99e5f47387c13c161d6f1640dd6d91b7d1c"
       }
     },
     "options": {
-      "target": 8,
+      "target": 1,
       "module": 1,
+      "lib": [
+        "lib.esnext.d.ts",
+        "lib.dom.d.ts"
+      ],
       "declaration": true,
       "declarationMap": true,
       "sourceMap": true,
@@ -229,10 +405,153 @@
       "incremental": true,
       "strict": true,
       "esModuleInterop": true,
-      "watch": true,
       "configFilePath": "/home/ec2-user/environment/track-generator/tsconfig.json"
     },
     "referencedMap": {
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es5.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2015.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2016.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2017.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2018.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2019.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.esnext.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.dom.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2015.core.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2015.collection.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2015.generator.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2015.iterable.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2015.promise.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2015.proxy.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2015.reflect.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2015.symbol.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2016.array.include.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2017.object.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2017.string.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2017.intl.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2018.intl.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2018.promise.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2018.regexp.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2019.array.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2019.object.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2019.string.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2019.symbol.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.esnext.intl.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.esnext.bigint.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/bezier-js/index.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/nanobus/index.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/node_modules/typed-emitter/index.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/common.d.ts": [
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/index.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/array.d.ts",
@@ -245,7 +564,9 @@
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/object.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/string.d.ts",
-        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/util.d.ts"
+        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/array.d.ts": [
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/index.d.ts",
@@ -259,7 +580,9 @@
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/object.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/string.d.ts",
-        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/util.d.ts"
+        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/collection.d.ts": [
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/index.d.ts",
@@ -273,7 +596,9 @@
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/object.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/string.d.ts",
-        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/util.d.ts"
+        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/date.d.ts": [
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/index.d.ts",
@@ -287,7 +612,9 @@
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/object.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/string.d.ts",
-        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/util.d.ts"
+        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/function.d.ts": [
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/index.d.ts",
@@ -301,7 +628,9 @@
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/object.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/string.d.ts",
-        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/util.d.ts"
+        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/lang.d.ts": [
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/index.d.ts",
@@ -315,7 +644,9 @@
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/object.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/string.d.ts",
-        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/util.d.ts"
+        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/math.d.ts": [
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/index.d.ts",
@@ -329,7 +660,9 @@
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/object.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/string.d.ts",
-        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/util.d.ts"
+        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/number.d.ts": [
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/index.d.ts",
@@ -343,7 +676,9 @@
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/object.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/string.d.ts",
-        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/util.d.ts"
+        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/object.d.ts": [
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/index.d.ts",
@@ -357,7 +692,9 @@
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/number.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/string.d.ts",
-        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/util.d.ts"
+        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/seq.d.ts": [
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/index.d.ts",
@@ -371,7 +708,9 @@
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/number.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/object.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/string.d.ts",
-        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/util.d.ts"
+        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/string.d.ts": [
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/index.d.ts",
@@ -385,7 +724,9 @@
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/number.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/object.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
-        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/util.d.ts"
+        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/util.d.ts": [
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/index.d.ts",
@@ -399,7 +740,9 @@
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/number.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/object.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
-        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/string.d.ts"
+        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/string.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/index.d.ts": [
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/common.d.ts",
@@ -413,16 +756,299 @@
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/object.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/seq.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/string.d.ts",
-        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/util.d.ts"
+        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/home/ec2-user/environment/track-generator/src/index.ts": [
         "/home/ec2-user/environment/track-generator/node_modules/@types/bezier-js/index.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/nanobus/index.d.ts",
-        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/index.d.ts"
+        "/home/ec2-user/environment/node_modules/typed-emitter/index.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/index.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/home/ec2-user/environment/track-generator/src/browser.ts": [
         "/home/ec2-user/environment/track-generator/node_modules/@types/bezier-js/index.d.ts",
-        "/home/ec2-user/environment/track-generator/src/index.ts"
+        "/home/ec2-user/environment/track-generator/src/index.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/parallel-test/dist/index.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/src/test/gapsInOutline.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/bezier-js/index.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/parallel-test/dist/index.d.ts",
+        "/home/ec2-user/environment/track-generator/src/index.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/assert.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/globals.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/assert.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/async_hooks.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/buffer.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/child_process.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/stream.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/net.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/cluster.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/child_process.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/net.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/console.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/constants.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/crypto.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/stream.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/dgram.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/net.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/dns.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/dns.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/domain.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/fs.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/stream.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/url.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/http.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/net.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/stream.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/url.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/http2.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/fs.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/net.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/stream.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/tls.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/url.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/http.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/https.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/tls.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/http.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/url.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/inspector.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/module.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/net.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/stream.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/dns.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/os.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/path.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/perf_hooks.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/async_hooks.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/process.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/punycode.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/querystring.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/readline.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/stream.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/repl.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/readline.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/vm.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/stream.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/string_decoder.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/timers.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/tls.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/crypto.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/dns.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/net.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/stream.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/trace_events.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/tty.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/net.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/url.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/querystring.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/v8.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/vm.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/worker_threads.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/stream.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/zlib.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/stream.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/base.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/globals.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/assert.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/async_hooks.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/buffer.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/child_process.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/cluster.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/console.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/constants.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/crypto.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/dgram.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/dns.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/domain.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/fs.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/http.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/http2.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/https.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/inspector.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/module.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/net.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/os.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/path.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/perf_hooks.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/process.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/punycode.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/querystring.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/readline.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/repl.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/stream.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/string_decoder.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/timers.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/tls.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/trace_events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/tty.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/url.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/v8.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/vm.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/worker_threads.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/zlib.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/globals.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/globals.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/index.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/base.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/globals.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts"
       ]
     },
     "exportedModulesMap": {
@@ -611,6 +1237,274 @@
       "/home/ec2-user/environment/track-generator/src/index.ts": [
         "/home/ec2-user/environment/track-generator/node_modules/nanobus/index.d.ts",
         "/home/ec2-user/environment/track-generator/node_modules/@types/bezier-js/index.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/parallel-test/dist/index.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/globals.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/assert.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/async_hooks.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/buffer.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/child_process.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/stream.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/net.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/cluster.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/child_process.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/net.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/console.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/constants.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/crypto.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/stream.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/dgram.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/net.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/dns.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/dns.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/domain.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/fs.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/stream.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/url.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/http.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/net.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/stream.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/url.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/http2.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/fs.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/net.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/stream.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/tls.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/url.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/http.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/https.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/tls.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/http.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/url.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/inspector.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/module.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/net.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/stream.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/dns.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/os.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/path.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/perf_hooks.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/async_hooks.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/process.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/punycode.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/querystring.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/readline.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/stream.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/repl.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/readline.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/vm.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/stream.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/string_decoder.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/timers.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/tls.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/crypto.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/dns.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/net.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/stream.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/trace_events.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/tty.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/net.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/url.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/querystring.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/v8.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/vm.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/worker_threads.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/stream.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/zlib.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/stream.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/base.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/globals.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/assert.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/async_hooks.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/buffer.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/child_process.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/cluster.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/console.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/constants.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/crypto.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/dgram.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/dns.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/domain.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/fs.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/http.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/http2.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/https.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/inspector.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/module.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/net.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/os.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/path.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/perf_hooks.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/process.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/punycode.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/querystring.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/readline.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/repl.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/stream.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/string_decoder.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/timers.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/tls.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/trace_events.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/tty.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/url.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/v8.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/vm.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/worker_threads.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/zlib.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/globals.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/globals.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/index.d.ts": [
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/base.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/globals.d.ts",
+        "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -622,9 +1516,6 @@
       "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2019.d.ts",
       "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.esnext.d.ts",
       "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.dom.d.ts",
-      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.dom.iterable.d.ts",
-      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
-      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.scripthost.d.ts",
       "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2015.core.d.ts",
       "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2015.collection.d.ts",
       "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2015.generator.d.ts",
@@ -650,9 +1541,9 @@
       "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.es2019.symbol.d.ts",
       "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.esnext.bigint.d.ts",
-      "/home/ec2-user/environment/track-generator/node_modules/typescript/lib/lib.esnext.full.d.ts",
       "/home/ec2-user/environment/track-generator/node_modules/@types/bezier-js/index.d.ts",
       "/home/ec2-user/environment/track-generator/node_modules/nanobus/index.d.ts",
+      "/home/ec2-user/environment/node_modules/typed-emitter/index.d.ts",
       "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/common.d.ts",
       "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/array.d.ts",
       "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/collection.d.ts",
@@ -667,7 +1558,53 @@
       "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/common/util.d.ts",
       "/home/ec2-user/environment/track-generator/node_modules/@types/lodash/ts3.1/index.d.ts",
       "/home/ec2-user/environment/track-generator/src/index.ts",
-      "/home/ec2-user/environment/track-generator/src/browser.ts"
+      "/home/ec2-user/environment/track-generator/src/browser.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/parallel-test/dist/index.d.ts",
+      "/home/ec2-user/environment/track-generator/src/test/gapsInOutline.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/globals.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/assert.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/async_hooks.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/buffer.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/child_process.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/cluster.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/console.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/constants.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/crypto.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/dgram.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/dns.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/domain.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/events.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/fs.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/http.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/http2.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/https.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/inspector.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/module.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/net.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/os.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/path.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/perf_hooks.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/process.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/punycode.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/querystring.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/readline.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/repl.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/stream.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/string_decoder.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/timers.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/tls.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/trace_events.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/tty.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/url.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/util.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/v8.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/vm.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/worker_threads.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/zlib.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/base.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/util.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/globals.d.ts",
+      "/home/ec2-user/environment/track-generator/node_modules/@types/node/ts3.2/index.d.ts"
     ]
   },
   "version": "3.5.1"

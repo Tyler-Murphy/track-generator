@@ -3,6 +3,8 @@ import { makeTrack, Track, getRandomTrackSection, emitter, helpers } from './ind
 
 type Color = 'black' | 'red' | 'blue' | 'green' | 'gray'
 
+console.log('initializing')
+
 let curvesDrawn = 0
 const canvas = document.createElement('canvas')
 canvas.setAttribute('style', 'border: 1px solid black;')
@@ -19,6 +21,15 @@ const drawingContext = canvas.getContext('2d') || new Proxy({} as CanvasRenderin
     }
 })
 
+function drawTrack(track: Track): void {
+    const scaler = getScaler(track)
+
+    track.forEach(({ center, leftEdge, rightEdge }) => {
+        drawCurve({ curve: center, scaler, dashed: true, color: 'gray' })
+        leftEdge.forEach(curve => drawCurve({ curve, scaler, color: 'red' }))
+        rightEdge.forEach(curve => drawCurve({ curve, scaler, color: 'blue' }))
+    })
+}
 
 function drawCurve({
     curve,
@@ -145,7 +156,7 @@ function getScaler(track: Track): (point: BezierJs.Point) => BezierJs.Point {
     console.debug(`height`, height)
     console.debug(`aspect ratio`, aspectRatio)
 
-    console.log(`Scale function created for rendering. It will translate points by ${JSON.stringify(necessaryTranslation)}, then scale by ${scaleFactor}. Width is ${widthIsLimitingDimension ? '' : 'not'} the limiting factor.`)
+    console.debug(`Scale function created for rendering. It will translate points by ${JSON.stringify(necessaryTranslation)}, then scale by ${scaleFactor}. Width is ${widthIsLimitingDimension ? '' : 'not'} the limiting factor.`)
 
     return point => helpers.points.multiply(
         helpers.points.add(
@@ -175,22 +186,23 @@ function getBoundingBox(track: Track): BezierJs.BBox {
     return Bezier.getUtils().findbbox(allCurves)
 }
 
-function refresh(): void {
-    const track = makeTrack()
-    const scaler = getScaler(track)
-    
+async function refresh(): Promise<void> {
+    emitter.removeAllListeners('sectionsSoFar')
+    emitter.on('sectionsSoFar', track => {
+        clearEverything()
+        drawTrack(track)
+    })
+
+    const track = await makeTrack(200)
+
     clearEverything()
 
-    track.forEach(({ center, leftEdge, rightEdge }) => {
-        drawCurve({ curve: center, scaler, dashed: true, color: 'gray' })
-        leftEdge.forEach(curve => drawCurve({ curve, scaler, color: 'red' }))
-        rightEdge.forEach(curve => drawCurve({ curve, scaler, color: 'blue' }))
-    })
+    drawTrack(track)
 }
 
-const automaticRefresh = setInterval(refresh, 5000)
+(window as any).drawTrack = drawTrack
 
-addEventListener('click', () => {
-    clearInterval(automaticRefresh)
-    refresh()
+addEventListener('click', async () => {
+    console.log(`refreshing because of click`)
+    await refresh()
 })

@@ -1,8 +1,7 @@
 import Bezier from 'bezier-js'
 import Nanobus = require('nanobus')
+import TypedEmitter from 'typed-emitter'
 import * as lodash from 'lodash'
-
-type Track = Array<TrackSection>
 
 /**
  * Algorithm
@@ -27,10 +26,22 @@ type Track = Array<TrackSection>
  *
  * TODO
  * - add little people that scream when they crash
+ * - handle errors
+ *   - Uncaught (in promise) Error: cannot scale this curve. Try reducing it first.
+    at Bezier.scale (bezier.js:637)
+    at bezier.js:722
+    at Array.forEach (<anonymous>)
+    at Bezier.outline (bezier.js:712)
+    at getRandomTrackSection (index.js:167)
+    at Object.<anonymous> (index.js:129)
+    at step (index.js:32)
+    at Object.next (index.js:13)
+    at fulfilled (index.js:4)
  */
 
 const trackWidth = 0.1
 const curveIntersectionThreshold = 0.001
+const maximumAllowedOutlineGap = 0.0001
 const emitter = new Nanobus()
 const xMinimum = 0
 const xMaximum = 1
@@ -44,10 +55,11 @@ const helpers = {
         invert,
         getLength,
         scaleLength,
+        distance,
     }
 }
 
-emitter.on('*', console.log.bind(console, 'event:'))
+emitter.on('*', console.debug.bind(console, 'event:'))
 
 export {
     makeTrack,
@@ -55,7 +67,10 @@ export {
     getRandomTrackSection,
     emitter,
     helpers,
+    hasGapsInOutline,
 }
+
+type Track = Array<TrackSection>
 
 interface TrackSection {
     center: Bezier,
@@ -76,26 +91,56 @@ interface Point {
     y: number
 }
 
-function makeTrack(requestedSections = 5): Track {
-    if (!Number.isInteger(requestedSections)) {
-        throw new Error(`The number of sections must be an integer`)
-    }
-
-    if (requestedSections < 1) {
-        throw new Error(`There must be at least one section`)
-    }
-    
+const maximumTriesPerSection = 2
+async function makeTrack(requestedSections = 5): Promise<Track> {
     const sections = [
         getRandomTrackSection()
     ]
-    
+    const triesBySection: Array<number> = [1]
+
+    let tries = 0
+
+    emitter.emit('sectionsSoFar', sections)
+    await minimalDelay()
+
     while (sections.length < requestedSections) {
-        sections.push(getRandomTrackSection({
-            previousSection: sections[sections.length - 1]
-        }))
+        const currentSectionIndex = sections.length
+
+        if (triesBySection[currentSectionIndex] > maximumTriesPerSection) {
+            console.log(`The previous section is difficult to build off of. Removing it and trying again`)
+
+            sections.pop()
+            triesBySection[currentSectionIndex] = 0
+            triesBySection[currentSectionIndex - 1] += 1
+
+            emitter.emit('sectionsSoFar', sections)
+            await minimalDelay()
+
+            continue
+        }
+
+        const nextSection = getRandomTrackSection({ previousSection: sections[currentSectionIndex - 1] })
+
+        emitter.emit('sectionsSoFar', [...sections, nextSection])
+
+        await minimalDelay()  // to give consumers of the emitter a chance to do something
+
+        triesBySection[currentSectionIndex] = (triesBySection[currentSectionIndex] || 0) + 1
+        console.debug(`triesBySection`, triesBySection)
+
+        if (hasAnySelfIntersections(getAllCurves([nextSection]), getAllCurves(sections))) {
+            console.log(`The next track section intersects the previous ones... retrying`)
+            continue
+        }
+
+        sections.push(nextSection)
     }
-    
+
     return sections
+}
+
+function minimalDelay(): Promise<void> {
+    return new Promise(resolve => setTimeout(resolve, 0))
 }
 
 function getRandomTrackSection({
@@ -108,7 +153,7 @@ function getRandomTrackSection({
     const boundingBoxOrigin: Point = previousSection ? add(invert(getRandomPoint()), endOfCenterLine(previousSection)): { x: xMinimum, y: yMinimum }
     const startingPoint = previousSection ? endOfCenterLine(previousSection) : getRandomPoint({ relativeTo: boundingBoxOrigin })
     const firstControlPoint = previousSection ? randomPointAlongEndOfCenterLineTangent(previousSection) : getRandomPoint({ relativeTo: boundingBoxOrigin })
-    
+
     console.debug(`Generating random track section with bounding box origin ${JSON.stringify(boundingBoxOrigin)}, starting point ${JSON.stringify(startingPoint)}, and first control point ${JSON.stringify(firstControlPoint)}`)
 
     const centerLine = new Bezier([
@@ -146,14 +191,20 @@ function getRandomTrackSection({
         return retry()
     }
 
+    if (hasGapsInOutline(outlineCurves)) {
+        console.log(`There are gaps in the outline... retrying`)
+
+        return retry()
+    }
+
     // split the left and right edges. An end cap comes first, followed by the left edge, followed by the second end cap, followed by the right edge
 
     if (endCapIndexes[0] !== 0) {
         throw new Error('The assumptions about end cap indexes are incorrect and the code needs to be updated')
     }
 
-    const leftEdge = outlineCurves.slice(endCapIndexes[0] + 1, endCapIndexes[1])
-    const rightEdge = outlineCurves.slice(endCapIndexes[1] + 1)
+    const rightEdge = outlineCurves.slice(endCapIndexes[0] + 1, endCapIndexes[1])
+    const leftEdge = outlineCurves.slice(endCapIndexes[1] + 1)
 
     if (hasAnySelfIntersections([centerLine, ...leftEdge, ...rightEdge])) {
         console.log(`Found self-intersections in the outline curve... retrying`)
@@ -193,14 +244,47 @@ function endpointIsTooCloseToCurve(curveToCheckEndpoints: Bezier, curveToStayAwa
     return false
 }
 
-function hasAnySelfIntersections(curves: ReadonlyArray<Bezier>): boolean {
+/** Assumes that outline curves are sequential and make a loop around the center line */
+function hasGapsInOutline(curves: ReadonlyArray<Bezier>): boolean {
+    for (let i = 1; i < curves.length; i += 1) {
+        const previousCurve = curves[i - 1]
+        const previousCurveEndPoint = previousCurve.get(1)
+        const curve = curves[i]
+        const curveStartPoint = curve.get(0)
+
+        if (distance(previousCurveEndPoint, curveStartPoint) > maximumAllowedOutlineGap) {
+            return true
+        }
+    }
+
+    // include the gap between the start of the first segment and the end of the last segment
+    if (distance(curves[0].get(0), curves[curves.length - 1].get(1)) > maximumAllowedOutlineGap) {
+        return true
+    }
+
+    return false
+}
+
+/** If existing curves are provided, they won't be checked for self-intersections. They'll only be checked for intersections with new curves */
+function hasAnySelfIntersections(curves: ReadonlyArray<Bezier>, existingCurves: ReadonlyArray<Bezier> = []): boolean {
     for (let firstCurveIndex = 0; firstCurveIndex < curves.length - 1; firstCurveIndex += 1) {
+        // find self-intersections in new curves
         for (let secondCurveIndex = firstCurveIndex; secondCurveIndex < curves.length; secondCurveIndex += 1) {  // start from the same index so that self-intersection checks happen
             if (hasIntersectionOtherThanAtCurveEnds(curves[firstCurveIndex], curves[secondCurveIndex])) {
                 return true
             }
         }
+
+        // find intersections between new curves and existing curves
+        for (let existingCurveIndex = 0; existingCurveIndex < existingCurves.length; existingCurveIndex += 1) {
+            if (hasIntersectionOtherThanAtCurveEnds(curves[firstCurveIndex], existingCurves[existingCurveIndex])) {
+                return true
+            }
+        }
     }
+
+    // find intersections between new curves and existing curves
+
 
     return false
 }
@@ -231,6 +315,14 @@ function hasIntersectionOtherThanAtCurveEnds(curve1: Bezier, curve2: Bezier): bo
 
         return isAwayFromEnds
     })
+}
+
+function getAllCurves(track: Track): ReadonlyArray<Bezier> {
+    return track.flatMap(section => [
+        section.center,
+        ...section.leftEdge,
+        ...section.rightEdge,
+    ])
 }
 
 function isProbablyEndCap(curve: Bezier): boolean {
@@ -283,4 +375,13 @@ function invert(point: Point): Point {
         x: -point.x,
         y: -point.y,
     }
+}
+
+function distance(point1: Point, point2: Point): number {
+    return getLength(
+        add(
+            point1,
+            invert(point2),
+        ),
+    )
 }
