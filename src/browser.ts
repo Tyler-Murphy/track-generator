@@ -7,8 +7,8 @@ console.log('initializing')
 
 const canvas = document.createElement('canvas')
 canvas.setAttribute('style', 'border: 1px solid black;')
-const canvasWidth = 1000
-const canvasHeight = 1000
+const canvasWidth = 1600
+const canvasHeight = 2000
 const canvasAspectRatio = canvasWidth / canvasHeight
 canvas.width = canvasWidth
 canvas.height = canvasHeight
@@ -188,17 +188,19 @@ async function refresh(): Promise<void> {
     emitter.removeAllListeners('sectionsSoFar')
     emitter.on('sectionsSoFar', track => {
         clearEverything()
-        drawTrack(track)
+        drawTrack(track);
+        (window as any).track = track
     })
 
-    const track = await makeTrack(15)
+    const track = await makeTrack(100)
 
     clearEverything()
 
     drawTrack(track)
 }
 
-(window as any).drawTrack = drawTrack
+(window as any).drawTrack = drawTrack;
+(window as any).clearEverything = clearEverything;
 
 addEventListener('click', async () => {
     console.log(`refreshing because of click`)

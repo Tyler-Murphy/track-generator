@@ -42,7 +42,7 @@ import * as lodash from 'lodash'
  */
 
 const minimumTrackWidth = 0.05
-const maximumTrackWidth = 0.5
+const maximumTrackWidth = 0.3
 const curveIntersectionThreshold = 0.001
 const maximumAllowedOutlineGap = 0.0001
 const emitter = new Nanobus()
@@ -71,6 +71,7 @@ export {
     emitter,
     helpers,
     hasGapsInOutline,
+    hasShortOutline,
 }
 
 type Track = Array<TrackSection>
@@ -79,6 +80,7 @@ interface TrackSection {
     center: Bezier,
     leftEdge: Array<Bezier>,
     rightEdge: Array<Bezier>,
+    boundingBox: BezierJs.BBox,
 }
 
 /** Definition of a cubic bezier curve */
@@ -94,7 +96,7 @@ interface Point {
     y: number
 }
 
-const maximumTriesPerSection = 3
+const maximumTriesPerSection = 5
 async function makeTrack(requestedSections = 5): Promise<Track> {
     const trackWidth = lodash.random(minimumTrackWidth, maximumTrackWidth, true)
     console.log(`Track width:`, trackWidth)
@@ -134,7 +136,7 @@ async function makeTrack(requestedSections = 5): Promise<Track> {
         triesBySection[currentSectionIndex] = (triesBySection[currentSectionIndex] || 0) + 1
         console.debug(`triesBySection`, triesBySection)
 
-        if (hasAnySelfIntersections(getAllCurves([nextSection]), getAllCurves(sections))) {
+        if (hasAnySelfIntersections(nextSection, sections)) {
             console.log(`The next track section intersects the previous ones... retrying`)
             continue
         }
@@ -187,7 +189,19 @@ function getRandomTrackSection({
         return retry()
     }
 
-    const outlineCurves = centerLine.outline(trackWidth / 2).curves
+    let outline
+    let outlineCurves
+
+    try {
+        outline = centerLine.outline(trackWidth / 2)
+        outlineCurves = outline.curves
+    } catch(error) {
+        console.warn(`Caught error while outlining... retrying`)
+        console.warn(error)
+
+        return retry()
+    }
+
     const endCapIndexes: Array<number> = []
     const endCaps = outlineCurves.filter((curve, index) => {
         if (isProbablyEndCap(curve, trackWidth)) {
@@ -215,6 +229,12 @@ function getRandomTrackSection({
         return retry()
     }
 
+    if (hasShortOutline(centerLine, outline)) {
+        console.log(`The outline is too short... retrying`)
+
+        return retry()
+    }
+
     // split the left and right edges. An end cap comes first, followed by the left edge, followed by the second end cap, followed by the right edge
 
     if (endCapIndexes[0] !== 0) {
@@ -224,17 +244,20 @@ function getRandomTrackSection({
     const rightEdge = outlineCurves.slice(endCapIndexes[0] + 1, endCapIndexes[1])
     const leftEdge = outlineCurves.slice(endCapIndexes[1] + 1)
 
-    if (hasAnySelfIntersections([centerLine, ...leftEdge, ...rightEdge])) {
+    const section = {
+        center: centerLine,
+        leftEdge,
+        rightEdge,
+        boundingBox: Bezier.getUtils().findbbox([centerLine, ...leftEdge, ...rightEdge])
+    }
+
+    if (hasAnySelfIntersections(section)) {
         console.log(`Found self-intersections in the outline curve... retrying`)
 
         return retry()
     }
 
-    return {
-        center: centerLine,
-        leftEdge,
-        rightEdge,
-    }
+    return section
 }
 
 const numberOfLines = 10
@@ -327,31 +350,49 @@ function hasGapsInOutline(curves: ReadonlyArray<Bezier>): boolean {
     return false
 }
 
-/** If existing curves are provided, they won't be checked for self-intersections. They'll only be checked for intersections with new curves */
-function hasAnySelfIntersections(curves: ReadonlyArray<Bezier>, existingCurves: ReadonlyArray<Bezier> = []): boolean {
-    for (let firstCurveIndex = 0; firstCurveIndex < curves.length - 1; firstCurveIndex += 1) {
-        // find self-intersections in new curves
-        for (let secondCurveIndex = firstCurveIndex; secondCurveIndex < curves.length; secondCurveIndex += 1) {  // start from the same index so that self-intersection checks happen
-            if (hasIntersectionOtherThanAtCurveEnds(curves[firstCurveIndex], curves[secondCurveIndex])) {
-                return true
-            }
-        }
+/**
+ * Sometimes, the outline end caps aren't at the end of the center line. They're only part way along the line.
+ */
+function hasShortOutline(centerLine: Bezier, outline: BezierJs.PolyBezier): boolean {
+    return outline.length() < 0.95 * 2 * centerLine.length()
+}
 
-        // find intersections between new curves and existing curves
-        for (let existingCurveIndex = 0; existingCurveIndex < existingCurves.length; existingCurveIndex += 1) {
-            if (hasIntersectionOtherThanAtCurveEnds(curves[firstCurveIndex], existingCurves[existingCurveIndex])) {
+/** If existing curves are provided, they won't be checked for self-intersections. They'll only be checked for intersections with new curves */
+function hasAnySelfIntersections(newSection: TrackSection, existingTrack: Track = []): boolean {
+    for (const existingSection of existingTrack) {
+        if (sectionsHaveIntersections(newSection, existingSection)) {
+            return true
+        }
+    }
+
+    return false
+}
+
+function sectionsOverlap(section1: TrackSection, section2: TrackSection) {
+    return Bezier.getUtils().bboxoverlap(section1.boundingBox, section2.boundingBox)
+}
+
+function sectionsHaveIntersections (section1: TrackSection, section2: TrackSection): boolean {
+    if (!sectionsOverlap(section1, section2)) {
+        return false
+    }
+
+    return curvesHaveIntersections(getAllCurves([section1, section2]))
+}
+
+function curvesHaveIntersections(curves: ReadonlyArray<Bezier>): boolean {
+    for (let i = 0; i < curves.length; i += 1) {
+        for (let j = i; j < curves.length; j += 1) { // start from the same index so that self-intersection checks happen
+            if (curvesHaveIntersectionOtherThanAtEnds(curves[i], curves[j])) {
                 return true
             }
         }
     }
 
-    // find intersections between new curves and existing curves
-
-
     return false
 }
 
-function hasIntersectionOtherThanAtCurveEnds(curve1: Bezier, curve2: Bezier): boolean {
+function curvesHaveIntersectionOtherThanAtEnds(curve1: Bezier, curve2: Bezier): boolean {
     if (curve1 === curve2) {
         // check for self-intersections instead of intersections with the other curve
         return curve1.selfintersects(curveIntersectionThreshold).length > 0

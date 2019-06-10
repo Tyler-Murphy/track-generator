@@ -27,7 +27,7 @@ function getGaps(curves: ReadonlyArray<Bezier>): ReadonlyArray<number> {
     return segmentGaps
 }
 
-test(`The error case can be reproduced by creating a curve with caps in its outline`, () => {
+test(`The error case can be reproduced by creating a curve with gaps in its outline`, () => {
     /**
      * two gaps in the outline were identified while observing drawn curves in the browser for this randomly-generated curve using these parameters
      */
@@ -41,7 +41,7 @@ test(`The error case can be reproduced by creating a curve with caps in its outl
     const outline = curve.outline(0.1 / 2)
     const segmentGaps = getGaps(outline.curves)
 
-    assert.ok(segmentGaps.filter(gapSize => gapSize > 0.001).length === 2)
+    assert.equal(segmentGaps.filter(gapSize => gapSize > 0.001).length, 2)
     assert.ok(hasGapsInOutline(outline.curves))
 })
 
