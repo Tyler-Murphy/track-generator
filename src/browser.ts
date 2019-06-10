@@ -174,15 +174,6 @@ interface Scaler {
     scaleFactor: number
 }
 
-/** Returns the maximum of the height or width of a track */
-function getMaximumDimension(track: Track): number {
-    const boundingBox = getBoundingBox(track)
-    const height = boundingBox.x.max - boundingBox.x.min
-    const width = boundingBox.y.max - boundingBox.y.min
-
-    return Math.max(height, width)
-}
-
 function getBoundingBox(track: Track): BezierJs.BBox {
     const allCurves = track.flatMap(trackSection => [
         trackSection.center,
