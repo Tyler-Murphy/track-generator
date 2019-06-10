@@ -295,11 +295,11 @@ function randomPointAlongEndOfCenterLineTangent(section: TrackSection): Point {
 function endpointIsTooCloseToCurve(curveToCheckEndpoints: Bezier, curveToStayAwayFrom: Bezier, trackWidth: number): boolean {
     const minimumAcceptableCapEndpointDistance = 0.99 * (trackWidth / 2)
 
-    if (curveToStayAwayFrom.project(curveToCheckEndpoints.points[0]).d < minimumAcceptableCapEndpointDistance) {
+    if (curveToStayAwayFrom.project(curveToCheckEndpoints.points[0]).d! < minimumAcceptableCapEndpointDistance) {
         return true
     }
 
-    if (curveToStayAwayFrom.project(curveToCheckEndpoints.points[3]).d < minimumAcceptableCapEndpointDistance) {
+    if (curveToStayAwayFrom.project(curveToCheckEndpoints.points[3]).d! < minimumAcceptableCapEndpointDistance) {
         return true
     }
 
@@ -390,7 +390,10 @@ function getAllCurves(track: Track): ReadonlyArray<Bezier> {
 function isProbablyEndCap(curve: Bezier, trackWidth: number): boolean {
     const length = curve.length()
 
-    return curve._linear && length > (0.95 * trackWidth) && length < (1.05 * trackWidth)
+    // @ts-ignore to allow private _linear access
+    const isLinear = curve._linear
+
+    return isLinear && length > (0.95 * trackWidth) && length < (1.05 * trackWidth)
 }
 
 function getRandomPoint({
