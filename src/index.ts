@@ -1,6 +1,5 @@
 import Bezier from 'bezier-js'
 import Nanobus = require('nanobus')
-import TypedEmitter from 'typed-emitter'
 import * as lodash from 'lodash'
 
 /**
