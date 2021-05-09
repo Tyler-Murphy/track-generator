@@ -20,7 +20,7 @@
     "@types/bezier-js": "0.0.8",
     "@types/lodash": "^4.14.134",
     "bezier-js": "^2.4.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "nanobus": "^4.4.0"
   },
   "devDependencies": {
